@@ -24,7 +24,7 @@ A simple and lightweight JavaScript library for form validation. `validateJS` he
 
 ## Installation
 
-1. Download the `validateJS` library from the [repository](https://github.com/yourusername/validateJS).
+1. Download the `validateJS` library from the [repository](https://github.com/fabioaacarneiro/validateJS/blob/master/validateJS.js)
 2. Include the JavaScript file in your HTML.
 
 ```html
