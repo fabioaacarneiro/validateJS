@@ -5,7 +5,7 @@ A simple and lightweight JavaScript library for form validation. `validateJS` he
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage](#Usage)
   - [Basic Validation](#basic-validation)
   - [Form Validation](#form-validation)
 - [Available Validation Rules](#available-validation-rules)
@@ -20,7 +20,6 @@ A simple and lightweight JavaScript library for form validation. `validateJS` he
   - [cep](#cep)
   - [cpf](#cpf)
 - [Example](#example)
-- [License](#license)
 
 ## Installation
 
@@ -30,6 +29,8 @@ A simple and lightweight JavaScript library for form validation. `validateJS` he
 ```html
 <script src="path/to/validateJS.js"></script>
 ```
+
+## Basic Validation
 
 3. Make a javascript file to implement your logic or use html of page with form.
 * blur event on input with id **city**
@@ -45,11 +46,15 @@ document.querySelector("#city").addEventListener("blur", function() {
 });
 ```
 
+## Form validation
+
 * formValidate() recive ids of form and submit button to analising if submit button can be enabled or disabled
 
 ```javascript
 formValidate('myForm', 'submitButton');
 ```
+
+## Min
 
 * min length
 
@@ -59,6 +64,8 @@ validate(this, {
 });
 ```
 
+## Max
+
 * max length
 
 ```javascript
@@ -66,6 +73,8 @@ validate(this, {
     max: 3
 });
 ```
+
+## Email
 
 * email is valid
 
@@ -75,6 +84,8 @@ validate(this, {
 });
 ```
 
+## Number
+
 * only number *[0-9]*
 
 ```javascript
@@ -82,6 +93,8 @@ validate(this, {
     number: true
 });
 ```
+
+## Text
 
 * only text *[a-zA-Z]*
 
@@ -91,6 +104,8 @@ validate(this, {
 });
 ```
 
+## Sanitize
+
 * sanitize removing all special characters
 
 ```javascript
@@ -98,6 +113,8 @@ validate(this, {
     sanitize: true
 });
 ```
+
+## Required
 
 * required is use to show required message error
 
@@ -107,6 +124,8 @@ validate(this, {
 });
 ```
 
+## Braphone
+
 * braphone check if phone number is Brazilian valid number
 
 ```javascript
@@ -114,6 +133,8 @@ validate(this, {
     braphone: true
 });
 ```
+
+## CEP
 
 * cep check if CEP of Brazil country, street, or any location based on CEP is valid
 
@@ -123,6 +144,8 @@ validate(this, {
 });
 ```
 
+## CPF
+
 * CPF check if CPF of Brazil person is valid CEP **it's not calculate CPF, just check quantity of number**
 
 ```javascript
@@ -130,6 +153,8 @@ validate(this, {
     cep: true
 });
 ```
+
+## Example
 
 * example of implementation in HTML file:
 
