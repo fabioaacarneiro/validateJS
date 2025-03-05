@@ -195,7 +195,6 @@ const formValidate = (form, submitButton) => {
     inputs.forEach(input => {
         input.addEventListener("blur", function () {
             const isValid = __inputFormValidate(form);
-            console.log("isValid: " + isValid);
             __buttonToggleActive(submitButton, isValid);
         });
     });
