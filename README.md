@@ -19,6 +19,7 @@ A simple and lightweight JavaScript library for form validation. `validateJS` he
   - [braphone](#braphone)
   - [cep](#cep)
   - [cpf](#cpf)
+  - [cnpj](#cnpj)
 - [Example](#example)
 
 ## Installation
@@ -146,11 +147,21 @@ validate(this, {
 
 ## CPF
 
-* CPF check if CPF of Brazil person is valid CEP **it's not calculate CPF, just check quantity of number**
+* CPF check if CPF of Brazil person is valid CPF **it's not calculate CPF, just check quantity of number**
 
 ```javascript
 validate(this, {
     cep: true
+});
+```
+
+## CNPJ
+
+- CNPJ check if CNPJ of Brazil legal entity or company is valid CNPJ, **it's not calculate CNPJ, just check quantity of number**
+
+```javascript
+validate(this, {
+    cnpj: true
 });
 ```
 

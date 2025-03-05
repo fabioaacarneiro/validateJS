@@ -165,6 +165,26 @@ const validate = (element, rules) => {
                     );
                 }
                 break;
+
+            case "cnpj":
+
+                const cnpjError = document.querySelector("#cnpj-error");
+
+                if (cnpjError) {
+                    cnpjError.remove();
+                }
+
+                const sanitizedCnpf = __sanitizeString(element.value.replace(/\s+/g, ''));
+                const cnpjRegex = /^\d{14}$/;
+                if (!cnpjRegex.test(sanitizedCnpf)) {
+                    __setErrorMessage(
+                        element,
+                        "O CNPJ deve conter 14 dígitos numéricos.",
+                        "cnpj-error"
+                    );
+                }
+                break;
+
             default:
                 console.error(`validação de campo desconhecido: ${rules[rule]}`);
         }
