@@ -186,7 +186,7 @@ const __setErrorMessage = (element, message, identifier) => {
 };
 
 const __sanitizeString = (str) => {
-    return str.replace(/[^a-zA-Z0-9\s]/g, '');
+    return str.replace(/[^a-zA-Z0-9áàãâéèêíîóôõúùûçÁÀÃÂÉÈÊÍÎÓÔÕÚÙÛÇ\s]/g, '');
 };
 
 const formValidate = (form, submitButton) => {
