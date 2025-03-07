@@ -69,6 +69,25 @@ const validate = (element, rules) => {
 
                 break;
 
+            case "currency":
+                const currencyTypeError = document.querySelector("#currency-type-error");
+
+                if (currencyTypeError) {
+                    currencyTypeError.remove();
+                }
+
+                const currencyVal = element.value;
+                const currencyRegex = /^[0-9,.]*$/;
+                if (!currencyRegex.test(currencyVal)) {
+                    __setErrorMessage(
+                        element,
+                        `O valor deve conter apenas números.`,
+                        "currency-type-error"
+                    );
+                }
+
+                break;
+
             case "text":
                 const textTypeErro = document.querySelector("#text-type-error");
 

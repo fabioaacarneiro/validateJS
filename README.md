@@ -1,18 +1,21 @@
 # validateJS
 
-A simple and lightweight JavaScript library for form validation. `validateJS` helps you validate form inputs with custom rules and ensure that required fields are correctly filled before submitting a form.
+A simple and lightweight JavaScript library for form validation. `validateJS`
+helps you validate form inputs with custom rules and ensure that
+required fields are correctly filled before submitting a form.
 
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#Usage)
+- **Usage**
   - [Basic Validation](#basic-validation)
   - [Form Validation](#form-validation)
-- [Available Validation Rules](#available-validation-rules)
+- **Available Validation Rules**
   - [min](#min)
   - [max](#max)
   - [email](#email)
   - [number](#number)
+  - [currency](#currency)
   - [text](#text)
   - [sanitize](#sanitize)
   - [required](#required)
@@ -33,8 +36,10 @@ A simple and lightweight JavaScript library for form validation. `validateJS` he
 
 ## Basic Validation
 
-3. Make a javascript file to implement your logic or use html of page with form.
-* blur event on input with id **city**
+Make a javascript file to implement your logic or use
+html of page with form.
+
+- blur event on input with id **city**
 
 ```javascript
 document.querySelector("#city").addEventListener("blur", function() {
@@ -49,7 +54,8 @@ document.querySelector("#city").addEventListener("blur", function() {
 
 ## Form validation
 
-* formValidate() recive ids of form and submit button to analising if submit button can be enabled or disabled
+- formValidate() recive ids of form and submit button to analising
+if submit button can be enabled or disabled
 
 ```javascript
 formValidate('myForm', 'submitButton');
@@ -57,7 +63,7 @@ formValidate('myForm', 'submitButton');
 
 ## Min
 
-* min length
+- min length
 
 ```javascript
 validate(this, {
@@ -67,7 +73,7 @@ validate(this, {
 
 ## Max
 
-* max length
+- max length
 
 ```javascript
 validate(this, {
@@ -77,7 +83,7 @@ validate(this, {
 
 ## Email
 
-* email is valid
+- email is valid
 
 ```javascript
 validate(this, {
@@ -87,7 +93,7 @@ validate(this, {
 
 ## Number
 
-* only number *[0-9]*
+- only number *[0-9]*
 
 ```javascript
 validate(this, {
@@ -95,9 +101,19 @@ validate(this, {
 });
 ```
 
+## Currency
+
+- only numbers comma(,) and dot(.)
+
+```javascript
+validate(this, {
+    currency: true
+})
+```
+
 ## Text
 
-* only text *[a-zA-Z]*
+- only text *[a-zA-Z]*
 
 ```javascript
 validate(this, {
@@ -107,7 +123,7 @@ validate(this, {
 
 ## Sanitize
 
-* sanitize removing all special characters
+- sanitize removing all special characters
 
 ```javascript
 validate(this, {
@@ -117,7 +133,7 @@ validate(this, {
 
 ## Required
 
-* required is use to show required message error
+- required is use to show required message error
 
 ```javascript
 validate(this, {
@@ -127,7 +143,7 @@ validate(this, {
 
 ## Braphone
 
-* braphone check if phone number is Brazilian valid number
+- braphone check if phone number is Brazilian valid number
 
 ```javascript
 validate(this, {
@@ -137,7 +153,7 @@ validate(this, {
 
 ## CEP
 
-* cep check if CEP of Brazil country, street, or any location based on CEP is valid
+- cep check if CEP of Brazil country, street, or any location based on CEP is valid
 
 ```javascript
 validate(this, {
@@ -147,7 +163,8 @@ validate(this, {
 
 ## CPF
 
-* CPF check if CPF of Brazil person is valid CPF **it's not calculate CPF, just check quantity of number**
+- CPF check if CPF of Brazil person is valid CPF
+**it's not calculate CPF, just check quantity of number**
 
 ```javascript
 validate(this, {
@@ -157,7 +174,8 @@ validate(this, {
 
 ## CNPJ
 
-- CNPJ check if CNPJ of Brazil legal entity or company is valid CNPJ, **it's not calculate CNPJ, just check quantity of number**
+- CNPJ check if CNPJ of Brazil legal entity or company is valid CNPJ,
+**it's not calculate CNPJ, just check quantity of number**
 
 ```javascript
 validate(this, {
@@ -167,7 +185,7 @@ validate(this, {
 
 ## Example
 
-* example of implementation in HTML file:
+- example of implementation in HTML file:
 
 ```html
 <form id="myForm">
